@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$.get("https://jsonplaceholder.typicode.com/todos/1", function(data, status){
+    console.log("status : ", status);
+    console.log("data : ", data);
+    console.log(data.userId);
+    console.log(data.title);
+    
+});
+</script>
+</head>
+<body>
+
+<div id="ekran"></div>
+
+
+</body>
+</html>

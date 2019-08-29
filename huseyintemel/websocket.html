@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <script src="http://localhost:1234/socket.io/socket.io.js"></script>
+     <script>
+          const socket = io.connect("http://localhost:1234");
+          socket.emit("sendMessageToServer");
+   
+     </script>
+</head>
+<body>
+     <p>
+          Merhaba, WebSocket
+     </p>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+	<script>
+	function yenikısım(){
+	var metin = document.getElementById("textarea").value;
+	var yenielement = document.createElement("p");
+	
+	var icerik = document.createTextNode(metin);
+	yenielement.appendChild(icerik); 
+	
+	var anakısım = document.getElementById("anakısım");
+	anakısım.appendChild(yenielement);
+	
+	}
+	function sil(){
+	 var elementler = document.getElementsByTagName("p");
+	   
+	    if(elementler.length != 0){
+		    var element = elementler[elementler.length-1];
+			
+			var anne = element.parentNode;
+			anne.removeChild(element);
+	
+	}
+	}
+	</script>
+	</head>	
+	
+	<body>
+    <div id="anakısım" style="background-color:">
+	<h3>Birinci Hikaye</h3>
+	
+	<p>
+	ajfdjdjdddkdklddddddddddddd
+	sssssssssada
+	dsjfvajkjjıjakj
+	</p>
+	
+	<h3>İkinci Hikaye</h3>
+	
+	<p>
+	fkkfkfkkkdldldldlldldldldld
+	slslslldllclclclclccc
+	aokmkfmkmkmafakokreopok
+	</p>
+  
+    </div>
+	<textarea  id="textarea" row="10" cols="30"></textarea>
+	
+	<button onclick="yenikısım()">Yeni Kısım Ekle</button>
+	<button onclick="sil()">sil</button>	
+	</body>
+	
+</html>	 
+	                     

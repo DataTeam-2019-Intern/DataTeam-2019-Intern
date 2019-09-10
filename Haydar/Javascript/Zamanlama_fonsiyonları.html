@@ -1,0 +1,53 @@
+<html>
+    <head>
+	
+	<script>
+	var say=5;
+	var indirme;
+	var sure;
+	 function baslat(){
+	  indirme = setInterval(dosyaindirme,5000);
+      sureyisay();
+	  sure=setInterval(sureyisay,1000);
+	 }
+	 
+	function dosyaindirme(){
+        window.alert("Dosya inmeye basladı...");	
+	    document.getElementById("para").innerHTML = "";
+		
+		say=5;
+	
+	}
+	
+	function sureyisay(){
+	document.getElementById("para").innerHTML = "Dosya " + say + " saniye içinde inecek...";
+	
+	say--;
+	
+	  if(say==0){
+	    clearInterval(sure);
+	   }
+	}
+	
+	function islemleridurdur(){
+	   clearInterval(sure);
+	   clearTimeOut(indirme);
+	   
+	   document.getElementById("para").innerHTML="Dosya indirmesi durduruldu...";
+	   
+	   say=5;
+		
+	}	
+	
+	</script>
+	</head>	
+	
+	<body>
+    <p>Dosyayı indirmek için tıklayın.</p>
+	<p id="para"></p>
+	
+	<button onclick="baslat();">İndirmek için tıklayın</button>
+	<button onclick="islemleridurdur();">İptal etmek için tıklayın</button>
+	</body>
+	
+</html>	

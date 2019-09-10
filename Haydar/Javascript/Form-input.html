@@ -1,0 +1,39 @@
+<html>
+    <head>
+	
+	
+	
+	</head>
+	
+	<script>
+	  
+	 function tikla(){
+	 
+	    var deger = document.form1.username.value;
+        
+		if (deger == ""){
+		   window.alert("Lutfen bir sey yazın");
+		   }
+		   
+		else {
+       
+          window.alert(deger);
+        }		  
+	  
+	 
+	 
+	 
+	 
+	 }
+	
+	</script>
+
+	
+	<body>
+	<form name = "form1" method = "post" action = "gonder.php">
+	
+	Kullanıcı Adı:<input type ="text" name = "username" /><br>
+	<button onclick = "tikla()">Tıkla</button>
+	</body>
+	
+</html>

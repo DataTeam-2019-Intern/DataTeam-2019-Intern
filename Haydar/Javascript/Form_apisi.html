@@ -1,0 +1,38 @@
+<html>
+    <head>
+	
+	
+	
+	</head>
+	
+	
+
+	
+	<body>
+
+     <script>
+	   function kontrol(){
+	   var x = document.getElementById("sayi");
+	   if(x.checkValidity() == false){
+	         window.alert(x.validationMessage);
+         }
+        else{ 	
+
+           window.alert("İnput Geçerli");
+        }
+ 		
+	   
+	 
+	  }	
+	 
+	 </script>
+	  <input  id = "sayi" type ="number" min="50" max ="100"  required/>
+	 <button onclick = "kontrol()">Kontrol Et</button>
+	 
+	 
+	 
+	 
+	</body>
+	
+</html>	
+	

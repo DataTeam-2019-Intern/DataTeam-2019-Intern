@@ -1,0 +1,63 @@
+<html>
+    <head>
+	<style>
+	.kirmizi {
+	    color:yellow;
+		background-color:blue;
+	}
+	</style>
+	<script>
+	function degistir(){
+	
+	var elementler = document.getElementsByTagName("h3");
+	var i =0;
+	
+	for(;i<elementler.length;i++){
+	 var özellik=document.createAttribute("class");
+	 özellik.value="kirmizi";
+	 
+	 elementler[i].setAttributeNode(özellik);
+	 }
+	
+	var hrefozelligi = document.createAttribute("href");
+	
+	hrefozelligi.value="https://www.google.com";
+	
+	document.getElementById("aetiketi").setAttributeNode(hrefozelligi);
+	
+	
+	
+	}
+	
+	
+	
+	
+	</script>
+	</head>	
+	
+	<body>
+    <div id="anakısım" style="background-color:">
+	<h3>Birinci Hikaye</h3>
+	
+	<p>
+	ajfdjdjdddkdklddddddddddddd
+	sssssssssada
+	dsjfvajkjjıjakj
+	</p>
+	
+	<h3>İkinci Hikaye</h3>
+	
+	<p>
+	fkkfkfkkkdldldldlldldldldld
+	slslslldllclclclclccc
+	aokmkfmkmkmafakokreopok
+	</p>
+	<a id ="aetiketi">Buraya Tıklayın</a>
+  
+    </div>
+	<button onclick="degistir()">Degistir</button>
+	
+		
+	</body>
+	
+</html>	 

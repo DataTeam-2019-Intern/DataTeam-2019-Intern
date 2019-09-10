@@ -1,0 +1,47 @@
+<html>
+    <head>
+	</head>	
+	
+	<body>
+    <style>
+	  div{
+	    width:200px;
+		height:200px;
+		background:red;
+		text-align:center;
+    }
+    </style> 
+	<div id = "div1">
+	Yazılım Bilimi
+	
+	
+	</div>
+	<img id="resim" src="ataturk.jpg" width="400px"  heigth="400px" />
+	<script>
+	
+	 var div=document.getElementById("div");
+	 div.onclick=function(){
+	 
+	  this.innerHTML="Haydar Düz";	
+	}
+	  var resim=document.getElementById("resim");
+	  resim.onmouseover=function(){
+	  
+	  this.src="ataturk1.jpg";
+	  }
+	  
+	  resim.onmouseout=function(){
+	  
+	  this.src="ataturk2.jpg";
+	  
+	  }
+	
+	
+	
+	
+	</script>
+	
+	</body>
+	
+</html>	
+	                     

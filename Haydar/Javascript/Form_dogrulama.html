@@ -1,0 +1,42 @@
+<html>
+    <head>
+	
+	
+	
+	</head>
+	
+	<script>
+	function dogrula(){
+	
+	   var deger = document.formisim.isim.value;
+	   
+	   if(deger == ""){
+	       window.alert("İsim alanı boş bırakılamaz");
+		   return false;
+	   }
+	   
+	}
+	
+	
+	
+	
+	  
+	 
+	</script>
+
+	
+	<body>
+	<form name="formisim" action="gönder.php" onsubmit="return dogrula()"  method="post">
+	
+	İsim alanı:<input type ="text" name="isim"><br>
+	
+	<input  type = "submit"  value = "Gönder">
+	
+	
+	
+	</form>
+	
+	
+	</body>
+	
+</html>

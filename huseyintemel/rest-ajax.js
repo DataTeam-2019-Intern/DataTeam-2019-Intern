@@ -11,14 +11,14 @@ if(req.url==="/"){
         xhr.send();
       
       
-        xhr.onreadystatechange = function(){
-          if (xhr.readyState === 4){
-             if (xhr.status === 200){
+        xhr.onreadystatechange = function(){  
+          if (xhr.readyState === 4){   //if response is ready
+             if (xhr.status === 200){  //if status=OK
                 console.log("xhr done successfully");
                 var resp = xhr.responseText;
-                var respJson = JSON.parse(resp);
-                console.log(respJson);
-                res.end(resp);
+                var respJson = JSON.parse(resp); // parsing the JSON data
+                console.log(respJson); 
+                res.end(resp);   //writing response on localhost
              } else {
                console.log("xhr failed");
              }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<script src="./dist/vivagraph.js"></script>
+		<script type='text/javascript'>
+			function onLoad() {
+				var g = Viva.Graph.graph();
+				g.addNode('1','User name 1');
+				g.addNode('2','User name 2');
+				g.addNode('3','User name 3');
+				g.addLink('1', '2');
+				g.addLink('2', '3');
+				g.addLink('3', '1');
+				var renderer = Viva.Graph.View.renderer(g);
+				renderer.run();	
+				//list each nodes from the graph
+				g.forEachNode(function(node){
+    				console.log(node.id, node.data);
+				});
+				// show the connected nodes with user id 1
+				g.forEachLinkedNode('1', function(linkedNode, link){
+    				console.log("Connected node: ", linkedNode.id, linkedNode.data); 
+    				console.dir(link); // link object itself
+				});		
+			}
+		</script>
+		 <style type="text/css" media="screen">
+        html, body, svg { width: 100%; height: 100%;}
+    </style>
+		</head>
+<body onload="onLoad()">
+</body>
+</html>
